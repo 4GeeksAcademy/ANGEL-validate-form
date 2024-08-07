@@ -1,1 +1,26 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  width: 90%;
+  height: 90%;
+}
+.card-information {
+  display: flex;
+}
+.buttons {
+  display: flex;
+  width: 100%;
+}
+.input-error {
+  background-color: #f8d7da;
+}

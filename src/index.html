@@ -1,29 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <div class="main">
+      <section class="border rounded">
+        <div class="px-3 py-4 bg-light border-bottom h4">
+          Payment form example
+        </div>
+        <div
+          id="missing-div"
+          class="px-3 py-4 mx-3 mt-4 rounded h4"
+          style="color: #741E25; background-color: #F8D7DA; border: 1px solid #F6CACE;"
+        >
+          Completar todos los campos
+        </div>
+        <form class="px-2">
+          <div
+            class="card-information row d-flex justify-content-center mb-5 mt-5"
+          >
+            <div class="row">
+              <div class="col-4">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Card #</label
+                >
+                <input
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="XXXXXXXXXXXXXXXXXXX"
+                />
+              </div>
+              <div class="col-4">
+                <label for="exampleFormControlInput2" class="form-label"
+                  >CVC #</label
+                >
+                <input class="form-control" id="cvcNumber" placeholder="000" />
+              </div>
+              <div class="col-4">
+                <label for="exampleFormControlInput3" class="form-label"
+                  >Amount</label
+                >
+                <input class="form-control" id="amount" placeholder="Amount" />
+              </div>
+            </div>
+          </div>
+          <div class="user-information row d-flex justify-content-center mb-5">
+            <div class="row">
+              <div class="col-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Fist Name</label
+                >
+                <input class="form-control mb-4" id="nameId" />
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >City</label
+                  >
+                  <input class="form-control" id="cityId" />
+                </div>
+                <div>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >We accept</label
+                  >
+                  <div
+                    class="col-5 fs-3 d-flex p-2 gap-3 align-items-center rounded"
+                    style="background-color: #6C757D;"
+                  >
+                    <input type="radio" name="visa" />
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <input type="radio" name="visa" />
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <input type="radio" name="visa" />
+                    <i class="fa-brands fa-cc-diners-club"></i>
+                    <input type="radio" name="visa" />
+                    <i class="fa-brands fa-cc-paypal"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="exampleFormControlInput2" class="form-label"
+                  >Last Name #</label
+                >
+                <input class="form-control mb-4" id="lastnameId" />
+                <div class="row mb-4">
+                  <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >State</label
+                    >
+                    <input class="form-control" id="stateId" />
+                  </div>
+                  <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Postal Code</label
+                    >
+                    <input class="form-control" id="postalCodeId" />
+                  </div>
+                </div>
+                <label for="exampleFormControlInput2" class="form-label"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control form-control-lg mb-1"
+                  rows="4"
+                  id="textareaId"
+                ></textarea>
+                <p class="text-secondary">Add any notes here</p>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="buttons bg-light mt-1 justify-content-end border py-2">
+          <div>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="submit" id="submit" class="btn btn-primary">
+              Send
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
+    <script src="app.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
